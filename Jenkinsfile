@@ -11,7 +11,7 @@ pipeline {
     agent any
     environment {
     	// You need to specify 4 required environment variables first, they are going to be used for the following IBM Cloud DevOps steps
-        IBM_CLOUD_DEVOPS_CREDS = credentials('3c90fe36-9a80-4a38-85ee-726cc1f5260c')
+        IBM_CLOUD_DEVOPS_CREDS = credentials('dlatest_bm')
         IBM_CLOUD_DEVOPS_ORG = 'ICDemo'
         IBM_CLOUD_DEVOPS_APP_NAME = 'Weather-V99'
         IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '1a3cbd28-0547-45e2-80fb-3d81c0dd1881'
