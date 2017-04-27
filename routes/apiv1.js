@@ -40,6 +40,7 @@ exports.getWeather = function(req, res) {
 router.get('/getWeather', exports.getWeather);
 
 /*
+
 exports.getWeather2 = function(req, res) {
 	var zip = req.query.zip;
 	if( (zip === null) || (typeof(zip) === 'undefined') ) {
