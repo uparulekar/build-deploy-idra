@@ -8,7 +8,7 @@
 	var until = require('selenium-webdriver').until;
 	var assert = require('assert');
 	var sauceLabs = require('saucelabs');
-    
+
 	var SAUCELABSURL = 'http://ondemand.saucelabs.com:80/wd/hub';
 	var DEMODRAURL = (process.env.APP_URL || 'https://demodratest.mybluemix.net/#/');
 
@@ -64,7 +64,7 @@
     it("Enter zip code and check output - 1", function(done) {
       driver.findElement(webdriver.By.id('zip1')).sendKeys('78613');
       driver.findElement(webdriver.By.id('zip1city')).getText().then(function(text) {
-        assert.equal(text, ' Anderson Mill');
+        assert.equal(text, ' Cedar Park');
         done();
       });
     });
