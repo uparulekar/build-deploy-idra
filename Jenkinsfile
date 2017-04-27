@@ -84,9 +84,12 @@ pipeline {
         	//set the APP_URL as the environment variable for the fvt
         	environment {
                 APP_URL = "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net"
+                SAUCE_USERNAME = jinfang_chen
+                SAUCE_ACCESS_KEY = 886fa760-2b7b-4487-97ae-7f433a02b967
             }
             steps {
-                sh 'grunt fvt-test --no-color -f'
+                //sh 'grunt fvt-test --no-color -f'
+                sh 'grunt fvt-saucelab -- no-color -f'
             }
             // post build section to use "publishTestResult" method to publish test result
             post {

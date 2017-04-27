@@ -10,7 +10,7 @@
 	var sauceLabs = require('saucelabs');
     
 	var SAUCELABSURL = 'http://ondemand.saucelabs.com:80/wd/hub';
-	var DEMODRAURL = 'https://demodratest.mybluemix.net/#/';
+	var DEMODRAURL = (process.env.APP_URL || 'https://demodratest.mybluemix.net/#/');
 
 	var driver = new webdriver.Builder().
         			usingServer(SAUCELABSURL).
