@@ -15,7 +15,7 @@ pipeline {
         SAUCELAB_CREDS = credentials('saucelab')
         IBM_CLOUD_DEVOPS_ORG = 'ucparule@us.ibm.com'
         IBM_CLOUD_DEVOPS_APP_NAME = 'Weather-V2'
-        IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '87ad5f6a-e427-4b56-9b9d-2511c0a4e866'
+        IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '02176dcf-37af-4bc9-be79-acfe20256c52'
     }
     tools {
         nodejs 'recent'
