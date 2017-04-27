@@ -90,7 +90,7 @@ pipeline {
             }
             steps {
                 //sh 'grunt fvt-test --no-color -f'
-                sh 'grunt fvt-saucelab -- no-color -f'
+                sh 'grunt fvt-saucelab --no-color -f'
             }
             // post build section to use "publishTestResult" method to publish test result
             post {
