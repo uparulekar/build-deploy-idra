@@ -71,6 +71,7 @@ exports.getWeather2 = function(req, res) {
 };
 router.get('/getWeather2', exports.getWeather2);
 
+/*
 exports.getWeather3 = function(req, res) {
   var zip = req.query.zip;
 	if( (zip === null) || (typeof(zip) === 'undefined') ) {
@@ -79,5 +80,5 @@ exports.getWeather3 = function(req, res) {
 
   console.log("uncomment this function to get coverage regession");
 };
-
+*/
 exports.router = router;
