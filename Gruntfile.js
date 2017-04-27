@@ -209,7 +209,8 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['availabletasks']);
     grunt.registerTask('dev-lint', ['jshint:browser', 'jshint:server']);
     grunt.registerTask('dev-setup', ['clean:all', 'bower', 'sass:dist', 'jshint:browser']);
-		grunt.registerTask('fvt-test', ['mochaTest:fvt']);
+    grunt.registerTask('fvt-test', ['mochaTest:fvt']);
+    grunt.registerTask('fvt-saucelab', ['mochaTest:saucelab-fvt']);
     grunt.registerTask('dev-test', ['clean:coverage', 'copy:resourcesForInstrumented', 'instrument', 'mochaTest:server-side-spec']);
     grunt.registerTask('dev-test-cov', ['clean:coverage', 'copy:resourcesForInstrumented', 'instrument', 'mochaTest:server-side', 'storeCoverage', 'makeReport']);
     grunt.registerTask('dev-uitest', ['mochaTest:fvt']);
