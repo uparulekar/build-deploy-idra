@@ -27,6 +27,8 @@ pipeline {
                 GIT_BRANCH = 'master'
             }
             steps {
+                echo ${SAUCELAB_CREDS_USR}
+                echo ${SAUCELAB_CREDS_PSW}
                 sh 'npm --version'
                 sh 'npm install'
                 sh 'grunt dev-setup --no-color'
@@ -85,8 +87,8 @@ pipeline {
         	//set the APP_URL as the environment variable for the fvt
         	environment {
                 APP_URL = "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net"
-                SAUCE_USERNAME = $SAUCELAB_CREDS_USR
-                SAUCE_ACCESS_KEY = $SAUCELAB_CREDS_PSW
+                SAUCE_USERNAME = ${SAUCELAB_CREDS_USR}
+                SAUCE_ACCESS_KEY = ${SAUCELAB_CREDS_PSW}
             }
             steps {
                 //sh 'grunt fvt-test --no-color -f'
