@@ -96,7 +96,7 @@ pipeline {
             post {
                 always {
                     // post build section to use "publishTestResult" method to publish test result
-                    publishTestResult type:'fvt', fileLocation: './mochafvt.json', environment: 'STAGING'
+                    publishTestResult type:'fvt', fileLocation: './saucelabfvt.json', environment: 'STAGING'
                 }
             }
         }
